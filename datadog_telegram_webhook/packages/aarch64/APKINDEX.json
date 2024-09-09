@@ -1,0 +1,33 @@
+{
+  "Signature": null,
+  "Description": "",
+  "Packages": [
+    {
+      "Name": "flask-datadog-telegram",
+      "Version": "0.1.0-r0",
+      "Arch": "aarch64",
+      "Description": "Datadog - Telegram Integration by Saulo Ramos",
+      "License": "",
+      "Origin": "flask-datadog-telegram",
+      "Maintainer": "",
+      "URL": "",
+      "Checksum": "FA1+Sb8M5aED0hMptoPIztaMMeo=",
+      "Dependencies": [
+        "python3",
+        "so:libc.musl-aarch64.so.1"
+      ],
+      "Provides": [
+        "cmd:datadog-telegram=0.1.0-r0"
+      ],
+      "InstallIf": null,
+      "Size": 4455620,
+      "InstalledSize": 13650980,
+      "ProviderPriority": 0,
+      "BuildTime": "1970-01-01T00:00:00Z",
+      "BuildDate": 0,
+      "RepoCommit": "",
+      "Replaces": null,
+      "DataHash": "feee871c0995c1f920d8b217c9a89a816d280c0c5ebe40b1a81b9004a80c2b44"
+    }
+  ]
+}
