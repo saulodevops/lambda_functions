@@ -62,3 +62,22 @@ The `webhook` function returns a JSON response indicating success.
 The Flask application is configured to run on all available IP addresses (`0.0.0.0`) on port `5000`.
 
 >In summary, this script sets up a Flask web server that listens for incoming webhook data, processes the data to extract and clean specific information, and sends a formatted alert message to a Telegram chat.
+
+## Melange Configuration
+The `melange.yaml` file is used to define the build process for the application as a package, defining:
+
+* Removed User Creation and Switching: All lines related to creating a non-root user (adduser, chown, su-exec) have been removed.
+* Environment Variables: The environment variables PYTHONDONTWRITEBYTECODE and PYTHONUNBUFFERED are still set to improve performance and logging.
+* Directory Setup: The directories for the executable and web application are still created and set up.
+* Executable Script: The script to run the application is still created and made executable.
+* Virtual Environment: The virtual environment is still set up and dependencies are installed.
+* Working Directory: The working directory is still set and the application code is copied into it.
+* Expose Port and Run Application: The port is exposed and the command to run the application is added to the Dockerfile.
+
+## APKO Configuration
+
+The `apko.yaml` file is used to define the environment and entrypoint for the application, using the app package created before and defining the executable as an entrypoint.
+
+## Reference for Melange and APKO
+
+[Chainguard Doc - Getting started with Melange](https://edu.chainguard.dev/open-source/build-tools/melange/getting-started-with-melange/)
