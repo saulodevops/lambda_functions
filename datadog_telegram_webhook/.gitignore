@@ -1,5 +1,6 @@
 .env
 .venv
+request_example.json
 packages
 flask-datadog-telegram.tar
 melange.rsa
