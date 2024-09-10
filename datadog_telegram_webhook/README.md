@@ -66,13 +66,38 @@ The Flask application is configured to run on all available IP addresses (`0.0.0
 ## Melange Configuration
 The `melange.yaml` file is used to define the build process for the application as a package, defining:
 
-* Removed User Creation and Switching: All lines related to creating a non-root user (adduser, chown, su-exec) have been removed.
-* Environment Variables: The environment variables PYTHONDONTWRITEBYTECODE and PYTHONUNBUFFERED are still set to improve performance and logging.
-* Directory Setup: The directories for the executable and web application are still created and set up.
-* Executable Script: The script to run the application is still created and made executable.
-* Virtual Environment: The virtual environment is still set up and dependencies are installed.
-* Working Directory: The working directory is still set and the application code is copied into it.
-* Expose Port and Run Application: The port is exposed and the command to run the application is added to the Dockerfile.
+* Set Environment Variables:
+
+`PYTHONDONTWRITEBYTECODE=1` prevents Python from writing .pyc files.
+`PYTHONUNBUFFERED=1` ensures that the output is not buffered, which is useful for logging.
+
+* Set Directories:
+
+Defines the paths for the executable and web application directories.
+
+* Create Executable Script:
+
+Creates a script that starts with a shebang pointing to the Python interpreter in the virtual environment, followed by the contents of `app.py`, and makes it executable.
+
+* Set Up Virtual Environment:
+
+Creates a virtual environment in the web application directory.
+
+* Install Dependencies:
+
+Activates the virtual environment and installs the dependencies listed in `requirements.txt`.
+
+* Set the Working Directory:
+
+Creates the `/app` directory and copies the application code into it.
+
+* Expose the Port:
+
+Exposes port `5000` for the application.
+
+* Run the Application:
+
+Adds the command to run the application to the Dockerfile.
 
 ## APKO Configuration
 
