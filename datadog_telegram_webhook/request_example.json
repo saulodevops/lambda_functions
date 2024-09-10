@@ -1,0 +1,78 @@
+{
+    "context": {
+        "id": "2lfND4Xk95UPXynfLQGZcIMyHxy",
+        "ts": "2024-09-05T20:10:47.654Z",
+        "pipeline_id": null,
+        "workflow_id": "p_KwC6yMz",
+        "deployment_id": "d_rNs5JlAn",
+        "source_type": "TRACE",
+        "verified": false,
+        "hops": null,
+        "test": true,
+        "replay": false,
+        "owner_id": "o_78I3PX7",
+        "platform_version": "3.50.3",
+        "workflow_name": "Test Workflow",
+        "resume": null,
+        "emitter_id": "hi_kvH5wN6",
+        "trace_id": "2lfND4Xk95UPXynfLQGZcIMyHxy"
+    },
+    "event": {
+        "body": {
+            "avatar_url": "",
+            "content": "Alerta do Monitor",
+            "embeds": [
+                {
+                    "description": "%%%\n\n\n!Alerta de quantidade de erros maior do que o natural\n[WARN]  Este alerta significa que tivemos ocorrência fora do padrão de erros relevantes (>10/min) e devemos observar o que pode estar ocorrendo!\n \n\n \n\n@webhook-LocalTests\n\nTest notification triggered by saulo@pay2free.com.\n\n[![Metric Graph](https://p.datadoghq.com/snapshot/view/dd-snapshots-prod/org_937598/2024-09-05/e915a494f9da55e2504de5d64b999c0f270de764.png)](https://app.datadoghq.com/monitors/147647078?from_ts=1725566140000&to_ts=1725567340000&event_id=7739399784520042688&source=monitor_notif)\n\n`sum(last_1m):sum:custom.relevant.errors{*}.as_count() - (sum:custom.modera.request.error{*}.as_count() + sum:custom.could.not.generate.qrcode{*}.as_count() + sum:custom.connect.econnrefused{*}.as_count()) > 30`\n\nThe monitor was last triggered at Thu Sep 05 2024 20:10:40 UTC.\n\n- - -\n\n[[Monitor Status](https://app.datadoghq.com/monitors/147647078?from_ts=1725566140000&to_ts=1725567340000&event_id=7739399784520042688&source=monitor_notif)] · [[Edit Monitor](https://app.datadoghq.com/monitors/147647078/edit?source=monitor_notif)] · [[Related Logs](https://app.datadoghq.com/logs?from_ts=1725566980000&to_ts=1725567040000&live=false&source=monitor_notif)]\n%%%",
+                    "fields": [
+                        {
+                            "inline": true,
+                            "name": "Status",
+                            "value": "Warn"
+                        },
+                        {
+                            "inline": true,
+                            "name": "Tipo",
+                            "value": "sum(last_1m):sum:custom.relevant.errors{*}.as_count() - (sum:custom.modera.request.error{*}.as_count() + sum:custom.could.not.generate.qrcode{*}.as_count() + sum:custom.connect.econnrefused{*}.as_count()) > 30"
+                        },
+                        {
+                            "inline": true,
+                            "name": "ID do Evento",
+                            "value": "7739399784520042688"
+                        },
+                        {
+                            "inline": true,
+                            "name": "Gravidade",
+                            "value": "warning"
+                        },
+                        {
+                            "inline": true,
+                            "name": "Data",
+                            "value": "1725567040000"
+                        }
+                    ],
+                    "title": "[TEST] Quantidade de erros anômala",
+                    "url": "https://app.datadoghq.com/event/event?id=7739399784520042688"
+                }
+            ],
+            "username": "datadog"
+        },
+        "client_ip": "44.192.28.102",
+        "headers": {
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br",
+            "content-length": "2307",
+            "content-type": "application/json; charset=utf-8",
+            "host": "eoe6pn1xa8nkooy.m.pipedream.net",
+            "traceparent": "00-00000000000000003a2de9b44d0be81c-dc1ddbb5ce27ba23-00",
+            "user-agent": "python-requests/2.32.3",
+            "x-custom-apikey": "f691b78f-bc07-45e6-b382-dc35d72a6bca",
+            "x-datadog-parent-id": "15861075036563028515",
+            "x-datadog-trace-id": "4192263788747810844"
+        },
+        "method": "POST",
+        "path": "/",
+        "query": {},
+        "url": "https://eoe6pn1xa8nkooy.m.pipedream.net/"
+    }
+}
