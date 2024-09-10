@@ -106,8 +106,3 @@ The `apko.yaml` file is used to define the environment and entrypoint for the ap
 ## Reference for Melange and APKO
 
 [Chainguard Doc - Getting started with Melange](https://edu.chainguard.dev/open-source/build-tools/melange/getting-started-with-melange/)
-
-TELEGRAM_BOT_TOKEN=7082369788:AAEZJKT28cA4eatpmvhqIJZVn_7JYKjWQw4
-TELEGRAM_CHAT_ID=-1002172000806
-EXPECTED_HEADER_KEY=x-custom-apikey
-EXPECTED_HEADER_VALUE=f691b78f-bc07-45e6-b382-dc35d72a6bca
